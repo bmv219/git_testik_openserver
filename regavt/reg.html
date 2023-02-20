@@ -1,0 +1,174 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/tityl.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+</head>
+<body>
+    <div id='avt0' class='avt0'>
+        <div class="cl-btn-6">
+        <div class="cl-btn-6-in">
+            <div class="cl-btn-6-txt">Закрыть</div>
+        </div>
+    </div>
+        <div class="avt">
+            <div class="avt1">
+                <h2>Регистрация</h2>
+            </div>
+            <div>
+            <form action="test.php" method="POST">
+                <label>Ник на сайте:</label><br>
+                <input type="text" name="sname" size="16" autocomplete="off" maxlength="12" placeholder="Придумайте ник" required><br>
+                <label>Пароль:</label><br>
+                <input type="password" name="password" size="16" autocomplete="off" maxlength="12" placeholder="Задайте пароль" required><br>
+                <label>Повторите пароль:</label><br>
+                <input type="password" name="passwordd" size="16" autocomplete="off" maxlength="12" placeholder="Введите еще раз" required><br>
+                <label>Имя:</label><br>
+                <input type="text" name="name" size="16" autocomplete="off" maxlength="12" placeholder="Ваше имя" required><br>
+                <label>Телефон:</label><br>
+                <input type="tel" name="tel" size="16" pattern="[0-9]{11}" autocomplete="off" maxlength="11" placeholder="89717642593" required><br>
+                <label>Дата рождения:</label><br>
+                <input type="date" name="dr" required>
+                <?php
+                if ($_SESSION['message']) {
+                    echo "<p class='pp'>". $_SESSION['message'] . "</p>";
+                }
+                unset($_SESSION['message']);
+                ?>
+                <button type='submit'></button>
+            </form>
+            </div>
+            <div class="avt2">
+                <p>Выполнить</p>
+            </div>
+        </div>
+        </div>
+<script>
+    let form_reg = document.forms[0].getElementsByTagName('u')[0];
+
+avt0.childNodes[1].onclick = function() {
+    window.location.href = '../test.html';
+}
+</script>
+<style>
+.avt0 {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background: black;
+}
+    .avt {
+        border: 2px green solid;
+        border-radius: 10px;
+        width: 240px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 20%;
+        position: absolute;    
+        align-items: center;  
+        color: black;
+        background: white;
+    }
+.avt1 {
+            text-align: center; 
+}
+h2 {
+                margin: 10px 0 14px 0;
+}
+        form {
+            margin-left:48px;
+        } form input {
+                outline: none;
+        }
+        .pp {
+            margin-left:-48px;
+            text-align: center;
+            margin-top: 7px;
+            margin-bottom: 0;
+            color: #DC143C;
+            }
+            .avt2 {
+            text-align: center;
+            background: green;
+            border-radius: 0 0 10px 10px;
+            border: 1px green solid;
+            margin: -11px -2px -2px -2px;
+            height: 20px;
+            color: white;
+            }
+            p {
+                margin: 0
+            }
+        button {
+            height: 20px;
+            width: 224px;
+            position: relative;
+            left:-40px;
+            top:12px;
+            cursor: pointer;
+            opacity: 0;
+        }
+        .cl-btn-6 {
+	top: 85px;
+    position: relative;
+	margin: 10px auto 0 auto;
+    width: 40px;
+    cursor: pointer;
+}
+.cl-btn-6-in {
+    width: inherit;
+}
+.cl-btn-6-txt { 
+	margin-left: -15px;
+    font-size: 13px; 
+    line-height: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    transition: all .2s ease-in;
+    opacity: 0;
+    cursor: pointer;
+    font-family: Verdana;
+}
+.cl-btn-6-in:before, .cl-btn-6-in:after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: inherit;
+    background: #CD5C5C;
+    left: 0;
+    transition: all .2s ease-in;
+}
+.cl-btn-6-in:before {
+    top: calc(50% - 4px); 
+    transform: rotate(45deg);  
+}
+.cl-btn-6-in:after {  
+    bottom: 50%;
+    transform: rotate(-45deg);  
+}
+.cl-btn-6:hover .cl-btn-6-txt {
+    opacity: 1;
+}
+.cl-btn-6:hover .cl-btn-6-in:before,
+.cl-btn-6:hover .cl-btn-6-in:after {
+    transform: rotate(0);
+}
+.cl-btn-6:hover .cl-btn-6-in:before {
+    top: 0;
+}
+.cl-btn-6:hover .cl-btn-6-in:after {
+    bottom: 0;
+}
+</style>
+</body>
+</html>

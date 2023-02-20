@@ -1,0 +1,168 @@
+body {
+	background-color: black;
+	color: white;
+	font-size:18px;
+	
+}
+header { 
+	background-color: #4B0082;
+	position: absolute;
+	height: 50px;
+	width: 100%;
+	left:0;
+	top:0;
+	line-height:90%;
+}
+.raskaz {
+	width:45%;
+	margin-left: auto;
+    margin-right: auto;
+	line-height:1.25em;
+}
+.raskaz p {
+	text-indent: 30px;
+}
+.raskaz h1 {
+	margin-top:70px;
+	margin-bottom:0;
+}
+
+.raskaz2 {
+	width:45%;
+	margin-left: auto;
+    margin-right: auto;
+	line-height:1.25em;
+}
+.raskaz2 p {
+	text-indent: 30px;
+}
+#vito {
+	font-size:16px;
+	right: 0;
+    left: 0;
+    margin: auto;
+	text-align:center;
+}
+a {
+	color: #FF9900;
+}
+#app {
+	position:absolute;
+	top:50%;
+	height:30px;
+	transform: rotate(90deg);
+	left:-30px;
+	
+}
+.od {
+	display:none;
+	text-align:center;
+	margin:auto;
+	left:0;
+	right:0;
+	width:45%;
+}
+#pervoe_foto {
+	width:56%;
+	padding: 5px;
+}
+.vtor_foto {
+	width:12%;
+	padding:3px;
+	margin:2px;
+	cursor: pointer;
+}
+.od img {
+	border: solid 1px #ccc;
+}
+.dv img {
+	border: solid 1px #ccc;
+}
+.dv a :hover {
+	border-color: #FF9900;
+}
+.dv {
+	text-align:center;
+	margin:auto;
+	left:0;
+	right:0;
+	width:45%;
+}
+#reg {
+	position:absolute;
+	right:1%;
+	width:150px;
+	top:60px;
+	
+}
+
+
+@media (max-width: 700px) {
+	.raskaz, .raskaz2, .dv {
+		width: 55%;
+	}
+	#pervoe_foto {
+		width:70%;
+	}
+}
+
+.reg {
+	position: absolute;
+	right: 1%;
+	top:142px;
+	border: 2px green solid;
+	border-radius: 10px;
+	background:white;
+	color:black;
+	width: 180px;
+	display: none;
+}
+.reg p {
+	margin-top: 10px;
+	line-height: 19px;
+}
+.knopkaotk {
+	text-align: center;
+	color:#ffffff;
+	background: green;
+	height: 20px;
+	border-radius: 0 0 10px 10px;
+	margin: -2px;
+	margin-top: -20px;
+}
+
+.reg h2 {
+	text-align: center;
+	margin-top: 4px;
+	margin-bottom: 10px;
+}
+
+.reg form {
+margin-left: 18px;
+}
+
+.reg form input {
+	outline: none;
+}
+
+.reg form p {
+	margin: 4px 0 0 -18px;
+	text-align: center;
+}
+
+.reg form p a {
+	color:chartreuse;
+}
+
+.reg button {
+	height: 19px;
+	width: 170px;
+	position: relative;
+	left:-26px;
+	top:11px;
+	cursor: pointer;
+	opacity: 0;
+}
+
+/*Дальше я перешел на SASS*/
+

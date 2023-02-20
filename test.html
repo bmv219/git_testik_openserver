@@ -1,0 +1,121 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+	<meta name="autor" content="Б.М.В.">
+	<meta name="description" content="Портфолио и подсказка для Б.М.В.">
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> <!--для верстки-->
+	<link rel="icon" type="image/png" sizes="32x32" href="./img/tityl.png" /> 	
+    <link rel="stylesheet" href="test.css"/>
+	<link rel="stylesheet" href="./sass/sass.css"/>
+	<title>Работа с GIT</title>
+	<!--<script type="text/javascript" src="jquery-3.6.1.min.js"></script>-->
+  </head>
+  <body>      
+  <header>
+    <div class='shapka'>
+	<marquee><p>Эта страничка используется для закрепления моих навыков и как подсказка на будущее (страничка ежедневно обновляется)</p></marquee>
+	</div>
+  </header>
+  <main>
+	<div class='raskaz'>
+	<h1>Немного о себе</h1>
+	<p align='justify';>Всем привет! Меня зовут Максим. Ниже Вы можете 
+	увидеть как я примерно выгляжу. Я начал заниматься изучением 
+	браузерной фигней в сентябре 2022 года и вот что уже умею. На этой страничке я немножко похимичу.</p>
+	</div>
+	
+	<div class='od' id='od'>
+	<img id='pervoe_foto' src='./img/1.jpg' alt='Мое фото1'>
+	</div>
+	<div class='dv' id='dv'>
+	
+	<a href='./img/1.jpg' title='Мое фото1'><img class='vtor_foto' src='./img/1.jpg'></a>
+	
+	<a href='./img/2.jpg' title='Мое фото2'><img class='vtor_foto' src='./img/2.jpg'></a>
+	
+	<a href='./img/3.jpg' title='Мое фото3'><img class='vtor_foto' src='./img/3.jpg'></a>
+	
+	<a href='./img/4.jpg' title='Мое фото4'><img class='vtor_foto' src='./img/4.jpg'></a>
+	
+	</div>
+	
+	<div class='raskaz2'>
+	<p align='justify'>Всю жизнь я ненавидел компьютеры, да я и сейчас их ненавижу, 
+	но кодить это другое. Как же я пришел к программированию?
+	Свой путь я начал после того, как познал ценность своего высшего образования...
+	Только что выпустившись из универа, я начал ходить по собеседованиям и нигде я не мог найти себя.
+	Трудно было решиться на продажу своей жизни за +-26.500 рублей в месяц.
+	От безысходности я начал изучать 1С. Продлилось это до первых 2 отказов на собеседованиях.
+	1С мне понравился. Это был первый язык программирования, который мне понравился. Правда я недалеко 
+	в нем продвинулся, мне было тяжело без знании бухгалирии. До 1С я интересовался и другими языками 
+	программирования (Java, Питон). Мне было очень тяжело вникнуть в них и они мне не нравились.
+	Хотя с нынешними мозгами я планирую что нибудь новое изучить. Так вот, после того, как моя карьера 
+	1С программиста не удалась, я навсегда забросил его. У меня было состояние безысходности и отчаяния...
+	К счастью, в одни момент я натыкаюсь на видео про JavaScript и о боже! Мне сразу понравился его синтаксис,
+	ведь он был такой же как и в 1С. Для меня это был просвет из той ямы, в которой я был на тот момент. Ну и дальше поехало.
+	Я понял, что мне нужно изучить для начала HTML затем CSS и уже потом только JS. На это у меня ушло 5 месяцев.
+	На 6 месяц я начал изучать Git и одновременно создавать хоть какое то портфолио. Кстати, за все время я еще и SQL почитал,
+	правда из-за того, что было мало мест, где можно было применить эти навыки, я чутка его подзабыл хех.</p>
+	<p align='justify'>HTML5, CSS3 И MySQL я изучил с помощью сайта <a href='https://metanit.com/web/html5/'>METANIT.COM</a>. 
+	Ушло на изучение этого примерно 1.5 месяца, так как я старался не пропускать ни одной темы. Мой любимый JS я изучал с помощью сайта 
+	<a href='https://learn.javascript.ru/'>JAVASCRIPT.RU</a>. На изучение JS ушло +-3.5 месяца. Во время изучения я столкнулся с 
+	проблемой понимания сетевых запросов, но так как я планирую изучить node.js в будущем, я решил отложить тему бэкенда.</p>
+	<button id='vito'>Инфо</button>
+	</main>
+	</div>
+	<div class="reg" id='regist'>
+		<div class="shapreg">
+			<h2>Авторизация</h2>
+		</div>
+		<form action="avtor.php" method="POST">
+		<label>Ник:</label><br>
+		<input type="text" min='5' name="vvod_nik" size="16" autocomplete="off" maxlength="12" placeholder="Введите ваш ник" required><br>
+		<label>Пароль:</label><br>
+		<input type="password" name="vvod_password" size="16" maxlength="12" autocomplete="off" placeholder="Ведите пароль" required>
+		<p><a style="cursor: pointer;" href='/regavt/reg.html'>Нет аккаунта?</a></p>
+		<?php
+			if ($_SESSION['message1']) {
+				echo "<p style='color:red'>". $_SESSION['message1'] . "</p>";
+			}
+			unset($_SESSION['message1']);
+			?>
+		<button type='submit'></button>
+		</form>
+	<div class="knopkaotk">
+		<p>Выполнить</p>
+	</div>
+	</div>
+
+
+	<div class='user' id="ik">
+	<?php
+	if ($_SESSION['mess']) {
+				echo "<p>Пользователь:<br>". $_SESSION['mess'] . "</p>";
+			} else {
+				echo "<h3 style='margin:5px'>Войти</h3>";
+			}
+			?>
+	<form name='zak' action="./regavt/zakr.php" method='POST'>
+	<button type="submit" style='background:black; display:inline-block;'>
+	<img style='cursor:pointer;width:40px;' id='ikon' src='./img/8.png'></button>
+	</form>
+	<img style='cursor:pointer;width:30px;' id='ikon1' src='./img/7.png'>
+	<br>
+	</div>
+
+
+
+
+
+	<div style='display:none;'>
+	
+	</div>
+	<!--<script src="public/bundle.js"></script>-->
+	<script src="test.js"></script>
+  </body>
+</html>
