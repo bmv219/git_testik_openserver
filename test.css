@@ -97,12 +97,30 @@ a {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 580px) {
 	.raskaz, .raskaz2, .dv {
-		width: 55%;
+		width: 70%;
+	}
+	.raskaz {
+		margin-top: 200px;
 	}
 	#pervoe_foto {
-		width:70%;
+		width:90%;
+	}
+}
+@media (max-width: 373px) {
+	.raskaz, .raskaz2, .dv {
+		width: 70%;
+	}
+	#lal {
+		width:100%;
+	}
+	.od {
+		text-align: center;
+		width: 100%;
+	}
+	#pervoe_foto {
+		width:230px;
 	}
 }
 
@@ -163,6 +181,74 @@ margin-left: 18px;
 	cursor: pointer;
 	opacity: 0;
 }
+
+@keyframes text1
+    {
+        10%{opacity: 1;}
+        20%{opacity: 0;}
+		30%{opacity: 0;}
+    }  
+@keyframes text2
+	{
+	    20%{opacity: 0;}
+        30%{opacity: 1;}
+		40%{opacity: 0;}
+    }
+@keyframes text3
+    {
+        30%{opacity: 0;}
+		40%{opacity: 0;}
+        50%{opacity: 1;}
+    }
+    @keyframes banner
+    {
+        10%{background-color: #FF9900;}
+        30%{background-color: #4B0082;}
+        50%{background-color: LimeGreen;}
+    }
+    .banner
+    {
+        width:60%;
+        height: 120px;
+        background-color: #777;
+        margin: 0 auto;
+        position: relative;
+    }
+    .text1,.text2,.text3
+    {
+		line-height: 70px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: #fff;
+        opacity: 0;
+    }
+ 
+    .text1
+    {
+        animation : text1 6s infinite;
+    }
+ 
+    .text2
+    {
+        animation : text2 6s infinite;
+    }
+
+	.text3
+    {
+        animation : text3 6s infinite;
+    }
+ 
+    .animated
+    {
+        opacity: 0.8;
+        position: absolute;
+        width: 100%;
+        height: 100%;  
+        background: black;
+        animation: banner 6s infinite;
+    }
 
 /*Дальше я перешел на SASS*/
 
