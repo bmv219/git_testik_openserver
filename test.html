@@ -17,7 +17,7 @@ session_start();
   </head>
   <body>      
   <header>
-    <div class='shapka'>
+    <div class='shapka' data-attr="<?php  echo $_SESSION['me']; unset($_SESSION['me']); ?>">
 	<marquee><p>Эта страничка используется для закрепления моих навыков и как подсказка на будущее (страничка ежедневно обновляется)</p></marquee>
 	</div>
   </header>
@@ -118,10 +118,43 @@ session_start();
 
 
 
+<br>
+	<div class='comment'>
+	<fieldset>
+                <legend>Комментарии</legend>
+				<?php 
+				if ($_SESSION['mess']) {
+	echo $_SESSION["snamee"];
+				 } else {
+					echo '<span>Авторизируйтесь, чтобы написать коментарии:</span><br>';
+				 } ?>
+<form method='POST' action='regavt/commen.php'>
+<textarea type='text' class='loa' maxlength="250" name='comm' placeholder="Выразите свое мнение о страничке" ></textarea>
+<br>
+<button type='submit'>Отправить</button>		
+</form>
+<hr>
+<div id='podgr'>
+<div class='massa' data-attr='
+<?php echo json_encode($_SESSION["masivjs"], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);?>
+'></div>
+	<div class='massa1' data-attr='
+<?php echo json_encode($_SESSION["masivjs1"], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);?>
+'></div>
+	<div class='massa2' data-attr='
+<?php echo json_encode($_SESSION["masivjs2"], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);?>
+'></div>
+				</div>
+<button id='stopo' onclick='stop()'>Вывести еще?</button>
+		</fieldset>
+</div>
 
-	<div style='display:none;'>
-	
-	</div>
+
+<div class='foot'>
+<footer>
+	<p><small>© Kazan 2023</small></p>
+	</footer>
+		</div>
 	<!--<script src="public/bundle.js"></script>-->
 	<script src="test.js"></script>
   </body>

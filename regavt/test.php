@@ -16,7 +16,6 @@ if(!$mysql) {
 }
 
 $telef = mysqli_query($mysql, "SELECT * FROM `User` WHERE `tel`='$tel'");
-
 if (mysqli_num_rows($telef) > 0) {
     $_SESSION['message']='Телефон уже зарегестрирован!';
     header('Location: reg.html');
@@ -40,6 +39,7 @@ if ($password !== $passwordd) {
 $password = md5($password."фиaa22");
 
 $mysql->query("INSERT INTO `User` (`nik`, `password`, `name`, `tel`, `dr`) VALUES ('$sname','$password', '$name', '$tel', '$dr')");
+$_SESSION['me'] = 'Yes';
 header('Location: ../test.html');
 $mysql->close();
 

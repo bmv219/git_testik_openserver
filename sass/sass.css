@@ -7,4 +7,27 @@
 .user p {
   margin: 0;
   text-align: left;
+}
+.user button {
+  border: 2px black solid;
+}
+
+.foot {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.comment {
+  margin: auto;
+  left: 0;
+  right: 0;
+  width: 45%;
+}
+.comment .loa {
+  width: 99%;
+  height: 65px;
+  resize: none;
 }/*# sourceMappingURL=sass.css.map */

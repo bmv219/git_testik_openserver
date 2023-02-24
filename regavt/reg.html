@@ -11,10 +11,11 @@ session_start();
 </head>
 <body>
     <div id='avt0' class='avt0'>
+        <div class="xx">
         <div class="cl-btn-6">
         <div class="cl-btn-6-in">
             <div class="cl-btn-6-txt">Закрыть</div>
-        </div>
+        </div></div>
     </div>
         <div class="avt">
             <div class="avt1">
@@ -56,6 +57,26 @@ avt0.childNodes[1].onclick = function() {
 }
 </script>
 <style>
+.xx {
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    top: 92px;
+    position: absolute;
+}
+.avt {
+        border: 2px green solid;
+        border-radius: 10px;
+        width: 240px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 140px;
+        position: absolute;    
+        align-items: center;  
+        color: black;
+        background: white;
+    }
 .avt0 {
     position: fixed;
     left: 0;
@@ -65,19 +86,7 @@ avt0.childNodes[1].onclick = function() {
     z-index: 99;
     background: black;
 }
-    .avt {
-        border: 2px green solid;
-        border-radius: 10px;
-        width: 240px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        top: 20%;
-        position: absolute;    
-        align-items: center;  
-        color: black;
-        background: white;
-    }
+
 .avt1 {
             text-align: center; 
 }
@@ -118,9 +127,9 @@ h2 {
             opacity: 0;
         }
         .cl-btn-6 {
-	top: 85px;
+	
     position: relative;
-	margin: 10px auto 0 auto;
+	margin: 0 auto;
     width: 40px;
     cursor: pointer;
 }

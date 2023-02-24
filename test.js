@@ -1,4 +1,14 @@
 let x = ik.childNodes[1].tagName;
+let y = document.querySelector('.massa').getAttribute('data-attr');
+let h = document.querySelector('.massa1').getAttribute('data-attr');
+let j = document.querySelector('.massa2').getAttribute('data-attr');
+let k = document.querySelector('.shapka').getAttribute('data-attr');
+
+let yyy;
+let hhh;
+let jjj;
+
+if (k) alert("Регистрация прошла успешно.");
 
 dv.onclick = function(event) {
     let smenaphoto = event.target.closest('a');
@@ -37,4 +47,37 @@ ikon1.onclick = function() {
 
 
 
+
+if (h) {
+  y = y.slice(3, -2);
+  yyy = y.split('","'); 
+  h = h.slice(3, -2);
+  hhh = h.split('","'); 
+  j = j.slice(3, -2);
+  jjj = j.split('","');
+}
+
+function stop() {
+  v = '';
+  window.scrollBy(0,-1);
+}
+
+let d = 2;
+let a = 0;
+let v = '';
+function podgruzka() {
+  while(a < hhh.length && v === '') {
+    let windowRelativeBottom = document.documentElement.getBoundingClientRect().bottom;
+    if (windowRelativeBottom > document.documentElement.clientHeight) break;
+    podgr.insertAdjacentHTML("beforeend", `<p>${yyy[a]}</p><p>${jjj[a]}</p><p>${hhh[a]}</p>`);
+    if (a == d) {
+      v = 'stop';
+      d+=3;
+      } 
+      a++;
+      if(a==hhh.length) stopo.style.display = 'none';
+  }
+}
+window.addEventListener('scroll', podgruzka);
+podgruzka();
        
