@@ -20,14 +20,13 @@
   text-align: center;
 }
 
-.comment {
-  margin: auto;
-  left: 0;
-  right: 0;
-  width: 45%;
-}
-.comment .loa {
+.loa {
   width: 99%;
   height: 65px;
   resize: none;
+  outline: none;
+}
+
+.tt {
+  float: right;
 }/*# sourceMappingURL=sass.css.map */

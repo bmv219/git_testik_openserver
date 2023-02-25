@@ -13,7 +13,6 @@ session_start();
     <link rel="stylesheet" href="test.css"/>
 	<link rel="stylesheet" href="./sass/sass.css"/>
 	<title>Работа с GIT</title>
-	<!--<script type="text/javascript" src="jquery-3.6.1.min.js"></script>-->
   </head>
   <body>      
   <header>
@@ -126,27 +125,18 @@ session_start();
 				if ($_SESSION['mess']) {
 	echo $_SESSION["snamee"];
 				 } else {
-					echo '<span>Авторизируйтесь, чтобы написать коментарии:</span><br>';
+					echo '<span>Авторизируйтесь, чтобы увидеть и написать коментарии:</span><br>';
 				 } ?>
 <form method='POST' action='regavt/commen.php'>
-<textarea type='text' class='loa' maxlength="250" name='comm' placeholder="Выразите свое мнение о страничке" ></textarea>
+<textarea type='text' id='loa' class='loa' maxlength="250" name='comm' placeholder="Выразите свое мнение о страничке" ></textarea>
 <br>
 <button type='submit'>Отправить</button>		
 </form>
 <hr>
 <div id='podgr'>
-<div class='massa' data-attr='
-<?php echo json_encode($_SESSION["masivjs"], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);?>
-'></div>
-	<div class='massa1' data-attr='
-<?php echo json_encode($_SESSION["masivjs1"], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);?>
-'></div>
-	<div class='massa2' data-attr='
-<?php echo json_encode($_SESSION["masivjs2"], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_NUMERIC_CHECK);?>
-'></div>
-				</div>
-<button id='stopo' onclick='stop()'>Вывести еще?</button>
-		</fieldset>
+	<button style='display:none;margin:auto' id='comme'>Загрузить еще?</button>
+</div>
+</fieldset>
 </div>
 
 
@@ -155,7 +145,10 @@ session_start();
 	<p><small>© Kazan 2023</small></p>
 	</footer>
 		</div>
-	<!--<script src="public/bundle.js"></script>-->
-	<script src="test.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.js"
+  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="test.js"></script>
+	<script type="text/javascript" src="./ajax/jquery.js"></script>
   </body>
 </html>

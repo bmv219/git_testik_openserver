@@ -24,17 +24,17 @@ session_start();
             <div>
             <form action="test.php" method="POST">
                 <label>Ник на сайте:</label><br>
-                <input type="text" name="sname" size="16" autocomplete="off" maxlength="12" placeholder="Придумайте ник" required><br>
+                <input type="text" name="sname" size="16" minlength="5" autocomplete="off" maxlength="12" placeholder="Придумайте ник" required><br>
                 <label>Пароль:</label><br>
-                <input type="password" name="password" size="16" autocomplete="off" maxlength="12" placeholder="Задайте пароль" required><br>
+                <input type="password" name="password" size="16" minlength="3" autocomplete="off" maxlength="12" placeholder="Задайте пароль" required><br>
                 <label>Повторите пароль:</label><br>
-                <input type="password" name="passwordd" size="16" autocomplete="off" maxlength="12" placeholder="Введите еще раз" required><br>
+                <input type="password" name="passwordd" size="16" minlength="3" autocomplete="off" maxlength="12" placeholder="Введите еще раз" required><br>
                 <label>Имя:</label><br>
-                <input type="text" name="name" size="16" autocomplete="off" maxlength="12" placeholder="Ваше имя" required><br>
+                <input type="text" name="name" size="16" minlength="5" autocomplete="off" maxlength="12" placeholder="Ваше имя" required><br>
                 <label>Телефон:</label><br>
                 <input type="tel" name="tel" size="16" pattern="[0-9]{11}" autocomplete="off" maxlength="11" placeholder="89717642593" required><br>
                 <label>Дата рождения:</label><br>
-                <input type="date" name="dr" required>
+                <input type="date" min="1970-01-01" max="2010-12-31" name="dr" required>
                 <?php
                 if ($_SESSION['message']) {
                     echo "<p class='pp'>". $_SESSION['message'] . "</p>";

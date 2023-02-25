@@ -96,9 +96,14 @@ a {
 	
 }
 
-
+.comment {
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 45%;
+}
 @media (max-width: 580px) {
-	.raskaz, .raskaz2, .dv {
+	.raskaz, .raskaz2, .dv, .comment {
 		width: 70%;
 	}
 	.raskaz {
@@ -109,7 +114,7 @@ a {
 	}
 }
 @media (max-width: 373px) {
-	.raskaz, .raskaz2, .dv {
+	.raskaz, .raskaz2, .dv, .comment {
 		width: 70%;
 	}
 	#lal {
